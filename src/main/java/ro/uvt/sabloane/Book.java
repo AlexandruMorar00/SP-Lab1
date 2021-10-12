@@ -1,9 +1,10 @@
 package ro.uvt.sabloane;
 import  java.util.*;
+import java.util.stream.Collectors;
 
 public class Book {
     private final String title;
-    private final Collection<Author> authors = new LinkedList<>();
+    private final ArrayList<Author> authors = new ArrayList<>();
 
     public Book(String title){
         this.title=title;
@@ -18,8 +19,10 @@ public class Book {
     public void removeAuthor(Author autor){
         authors.remove(autor);
     }
-    public Collection<Author> getAuthors(){
-        return Collections.unmodifiableList(authors);
+    public ArrayList<Author> getAuthors(){
+
+        return authors;
+
     }
 
 }
